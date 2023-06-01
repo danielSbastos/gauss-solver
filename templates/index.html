@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}"/>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap-reboot.min.css') }}"/>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/site.css') }}"/>
+  <link rel="text/javascript" href="https://www.jsdelivr.com/package/npm/mathjs"/>
+  <meta charset="UTF-8">
+  <title>Sistemas de Equações</title>
+</head>
+<body>
+  <h1>Resolver Sistema de Equações</h1>
+  <!-- <hr/> -->
+  <p>Selecionar dimensão do sistema</p>
+  <div id="sizes-container">
+    <label>Linhas
+      <select class="form-select" id="rows">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+    </label>
+    <label>Colunas
+      <select class="form-select" id="cols">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+    </label>
+  </div>
+  
+  <!-- <p>Valores</p> -->
+  
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <div class="card m-2">
+          <div class="card-body">
+            <mtable id="my-table">
+              <mtr>
+                <mtd>
+                  <input type="number" class="form-control"/></mtd>
+                </mtr>
+              </mtable>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-sm">
+          <div class="card m-2">
+            <div class="card-body">
+          
+              <div class="m-2" id="results-container">
+                <input type="number" class="form-control"/>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <button class="btn btn-primary m-2 mt-4 mb-5" id="solve-btn">Resolver</button>
+    
+    <ul class="list-group mt-3 ms-2 me-2" id="steps-list">
+      <li class="list-group-item text-wrap"></li>
+    </ul>
+
+    <div id="result"></div>
+  </body>
+  <script src="{{ url_for('static', filename='js/bootstrap.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+  </html>
